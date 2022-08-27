@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LayoutPlayground</string>
+    <string name="button_prev">Prev</string>
+    <string name="button_next">Next</string>
+</resources>
