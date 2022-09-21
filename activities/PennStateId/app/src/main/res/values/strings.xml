@@ -19,4 +19,9 @@
     <string name="ist_dean_id_number">8 8765 4321</string>
     <string name="ist_dean_position_description">FACULTY/DEAN</string>
 
+    <string name="email_label">Email: </string>
+    <string name="password_label">Password: </string>
+    <string name="login_button">LogIn</string>
+
+
 </resources>
