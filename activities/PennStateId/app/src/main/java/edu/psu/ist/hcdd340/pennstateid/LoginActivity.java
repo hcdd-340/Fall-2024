@@ -25,6 +25,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         EditText emailEditText = findViewById(R.id.editTextEmail);
         String email = emailEditText.getText().toString();
-        Log.d(TAG, "Email entered: " + email);
+
+        EditText passwordEditText = findViewById(R.id.editTextPassword);
+        String password = passwordEditText.getText().toString();
+        Log.d(TAG, "Email: " + email + " and Password: " + password);
     }
 }

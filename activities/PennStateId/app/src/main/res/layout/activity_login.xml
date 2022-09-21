@@ -49,4 +49,13 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/email_label"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBaseline_toBaselineOf="@+id/password_label"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
