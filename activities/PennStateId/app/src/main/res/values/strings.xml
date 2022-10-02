@@ -25,5 +25,8 @@
 
     <string name="email_hint">abc123@psu.edu</string>
 
+    <string name="menu_info">Info</string>
+    <string name="menu_register">Register</string>
+
 
 </resources>
