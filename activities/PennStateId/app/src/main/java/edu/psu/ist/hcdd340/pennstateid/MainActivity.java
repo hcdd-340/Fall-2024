@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +27,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int menuId = item.getItemId();
+
+        if (menuId == R.id.menu_info) {
+            Log.d(TAG, "Info menu clicked!");
+            return true;
+        } else if (menuId == R.id.menu_register) {
+            Log.d(TAG, "Register menu clicked!");
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+                @Override
     public void onClick(View view) {
         Log.d(TAG, String.format("event source id: %s", view.getId()));
 
