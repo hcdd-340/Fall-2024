@@ -27,6 +27,9 @@
 
     <string name="menu_info">Info</string>
     <string name="menu_register">Register</string>
+    <string name="app_info">This app supports class activities for HCDD 340!</string>
+    <string name="login_error_title">Unable to login</string>
+    <string name="login_error_message">Please retry using correct email and password.</string>
 
 
 </resources>
