@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (menuId == R.id.menu_register) {
             Log.d(TAG, "Register menu clicked!");
             return true;
+        } else if (menuId == R.id.menu_login) {
+            Log.d(TAG, "LogIn menu clicked!");
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
