@@ -2,6 +2,7 @@ package edu.psu.ist.hcdd340.pennstateid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -41,15 +42,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         } else if (menuId == R.id.menu_register) {
             Log.d(TAG, "Register menu clicked!");
+            Intent registerIntent = new Intent(this, RegisterActivity.class);
+            startActivity(registerIntent);
             return true;
         } else if (menuId == R.id.menu_login) {
             Log.d(TAG, "LogIn menu clicked!");
+            Intent loginIntent = new Intent(this, LoginActivity.class);
+            startActivity(loginIntent);
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-                @Override
+    @Override
     public void onClick(View view) {
         Log.d(TAG, String.format("event source id: %s", view.getId()));
 

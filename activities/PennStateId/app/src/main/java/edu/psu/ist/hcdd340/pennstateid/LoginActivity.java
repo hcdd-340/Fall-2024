@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -70,10 +71,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Snackbar.LENGTH_LONG).show();
             return true;
         } else if (menuId == R.id.menu_register) {
-            Button button = findViewById(R.id.button_login);
-            Snackbar.make(button,
-                    "Registration not implemented yet!",
-                    Snackbar.LENGTH_SHORT).show();
+            Intent registerIntent = new Intent(this, RegisterActivity.class);
+            startActivity(registerIntent);
             return true;
         }
         return super.onOptionsItemSelected(item);
