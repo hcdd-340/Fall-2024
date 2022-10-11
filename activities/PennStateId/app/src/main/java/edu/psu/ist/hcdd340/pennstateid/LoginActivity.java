@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -19,6 +20,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private final static String TAG = "LOG_IN";
 
+    private SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         Button button = findViewById(R.id.button_login);
         button.setOnClickListener(this);
+
+        sharedPreferences = getSharedPreferences(RegisterActivity.SHARED_PREF_NAME, MODE_PRIVATE);
     }
 
     @Override
@@ -38,8 +43,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Log.d(TAG, "Email: " + email + " and Password: " + password);
 
         /** toy example — DO NOT do this in production code! **/
-        String userAllowed = "hcdd340@psu.edu";
-        String correctPassword = "IST";
+        String userAllowed = retrieveSavedEmail();
+        String correctPassword = retrieveSavedPassword();
         if (email.equals(userAllowed) &&
                 password.equals(correctPassword)) {
             Button button = findViewById(R.id.button_login);
@@ -53,6 +58,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             d.setPositiveButton(android.R.string.ok, null);
             d.show();
         }
+    }
+
+    private String retrieveSavedEmail() {
+        return sharedPreferences.getString(RegisterActivity.EMAIL_KEY, null);
+    }
+
+    private String retrieveSavedPassword() {
+        return sharedPreferences.getString(RegisterActivity.PASSWORD_KEY, null);
     }
 
     @Override

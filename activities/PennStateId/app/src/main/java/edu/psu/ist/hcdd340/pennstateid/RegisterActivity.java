@@ -3,6 +3,7 @@ package edu.psu.ist.hcdd340.pennstateid;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,8 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
     public static final String LAST_NAME_KEY = "LAST_NAME";
     public static final String IST_MAJOR_KEY = "IS_IST_MAJOR";
 
+    private SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,8 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
 
         Button cancelButton = findViewById(R.id.button_cancel_registration);
         cancelButton.setOnClickListener(this);
+
+        sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
     }
 
     @Override
@@ -85,6 +90,15 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
     void saveUserInformation(String email, String password, String firstName,
                              String lastName, boolean isISTMajor) {
 
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(EMAIL_KEY, email);
+        editor.putString(PASSWORD_KEY, password);
+        editor.putString(FIRST_NAME_KEY, firstName);
+        editor.putString(LAST_NAME_KEY, lastName);
+
+        editor.putBoolean(IST_MAJOR_KEY, isISTMajor);
+
+        editor.apply();
     }
 
 }
