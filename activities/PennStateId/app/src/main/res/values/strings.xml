@@ -40,5 +40,35 @@
 
     <string name="in_ist_switch_label">I am an IST major</string>
 
+    <string name="about_hcdd_340"><big><b>Human-Centered Design for Mobile Computing (HCDD 340)</b></big>
+    \n
+    \n
+    This course will provide a <i>hands-on</i> introduction to different methods and tools for designing and developing mobile systems.
+    \n
+    \n
+    It will specifically focus on introducing different input modalities, discussing design guidelines, exploring sensing capabilities, and addressing accessibility requirements in mobile devices.
+    \n
+    \n
+    Toward this goal, the course will use the Android ecosystem to design and develop applications and interfaces.
+    \n
+    \n
+    The course will specifically follow a learning-by-doing approach through different class activities, assignments, and a final project.
+    \n
+    \n
+    <b>Learning Objectives</b>
+    \n
+    \n
+    \u00A0\u00A0● Become familiar with processes and tools for mobile system design and development
+    \n
+    \n
+    \u00A0\u00A0● Understand design requirements and guidelines for mobile applications
+    \n
+    \n
+    \u00A0\u00A0● Translate design ideas into functional prototypes and applications
+    \n
+    \n
+    \u00A0\u00A0● Develop and evaluate mobile systems
+    </string>
+
 
 </resources>
