@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int menuId = item.getItemId();
 
         if (menuId == R.id.menu_info) {
-            Log.d(TAG, "Info menu clicked!");
+            Intent aboutIntent = new Intent(this, AboutActivity.class);
+            startActivity(aboutIntent);
             return true;
         } else if (menuId == R.id.menu_register) {
             Log.d(TAG, "Register menu clicked!");
