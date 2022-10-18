@@ -74,13 +74,11 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
         String firstName = getInputFromEditText(R.id.editFirstName);
         String lastName = getInputFromEditText(R.id.editLastName);
 
-        SwitchCompat switchMajor = findViewById(R.id.is_ist_major);
-        boolean isISTMajor = switchMajor.isChecked();
 
         Log.d(TAG, "Email: " + email + ", first name: " + firstName +
-                ", last name: " + lastName + ", IST major?: " + isISTMajor);
+                ", last name: " + lastName);
 
-        saveUserInformation(email, password, firstName, lastName, isISTMajor);
+        saveUserInformation(email, password, firstName, lastName);
     }
 
     /**
@@ -88,15 +86,13 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
      *
      */
     void saveUserInformation(String email, String password, String firstName,
-                             String lastName, boolean isISTMajor) {
+                             String lastName) {
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(EMAIL_KEY, email);
         editor.putString(PASSWORD_KEY, password);
         editor.putString(FIRST_NAME_KEY, firstName);
         editor.putString(LAST_NAME_KEY, lastName);
-
-        editor.putBoolean(IST_MAJOR_KEY, isISTMajor);
 
         editor.apply();
     }
