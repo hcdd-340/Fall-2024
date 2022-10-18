@@ -36,7 +36,7 @@
     <string name="login_error_title">Unable to login</string>
     <string name="login_error_message">Please retry using correct email and password.</string>
     <string name="last_name_label">Last Name:</string>
-    <string name="first_name_label">First Name</string>
+    <string name="first_name_label">First Name:</string>
 
     <string name="in_ist_switch_label">I am an IST major</string>
 
