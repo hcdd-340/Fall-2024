@@ -67,8 +67,18 @@
         android:layout_marginBottom="24dp"
         android:text="@string/password_label"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/is_ist_major"
+        app:layout_constraintBottom_toTopOf="@+id/college_label"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/college_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/college_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/button_register"
+        app:layout_constraintStart_toStartOf="@+id/password_label" />
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -114,17 +124,5 @@
         android:inputType="textPassword"
         app:layout_constraintBaseline_toBaselineOf="@+id/password_label"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmail" />
-
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/is_ist_major"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
-        android:text="@string/in_ist_switch_label"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
