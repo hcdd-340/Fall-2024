@@ -7,8 +7,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -38,6 +40,16 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
         cancelButton.setOnClickListener(this);
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.penn_state_colleges,
+                android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        Spinner spinner;
+        spinner = findViewById(R.id.spinner_college);
+        spinner.setAdapter(adapter);
     }
 
     @Override

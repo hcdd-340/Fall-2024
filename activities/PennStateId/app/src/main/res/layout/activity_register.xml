@@ -125,4 +125,13 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/password_label"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmail" />
 
+    <Spinner
+        android:id="@+id/spinner_college"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/college_label"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+        app:layout_constraintTop_toTopOf="@+id/college_label" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
