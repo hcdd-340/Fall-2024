@@ -24,7 +24,7 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
     public static final String PASSWORD_KEY = "PASSWORD";
     public static final String FIRST_NAME_KEY = "FIRST_NAME";
     public static final String LAST_NAME_KEY = "LAST_NAME";
-    public static final String IST_MAJOR_KEY = "IS_IST_MAJOR";
+    public static final String COLLEGE_KEY = "COLLEGE";
 
     private SharedPreferences sharedPreferences;
 
@@ -86,11 +86,14 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
         String firstName = getInputFromEditText(R.id.editFirstName);
         String lastName = getInputFromEditText(R.id.editLastName);
 
+        Spinner spinner = findViewById(R.id.spinner_college);
+        String college = (String) spinner.getSelectedItem();
+
 
         Log.d(TAG, "Email: " + email + ", first name: " + firstName +
-                ", last name: " + lastName);
+                ", last name: " + lastName + ", college: " + college);
 
-        saveUserInformation(email, password, firstName, lastName);
+        saveUserInformation(email, password, firstName, lastName, college);
     }
 
     /**
@@ -98,13 +101,15 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
      *
      */
     void saveUserInformation(String email, String password, String firstName,
-                             String lastName) {
+                             String lastName, String college) {
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(EMAIL_KEY, email);
         editor.putString(PASSWORD_KEY, password);
         editor.putString(FIRST_NAME_KEY, firstName);
         editor.putString(LAST_NAME_KEY, lastName);
+
+        editor.putString(COLLEGE_KEY, college);
 
         editor.apply();
     }
