@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class CampusListAdapter extends
         RecyclerView.Adapter<CampusListAdapter.CampusViewHolder> {
     private final String[] mCampusList;
@@ -38,7 +40,7 @@ public class CampusListAdapter extends
         return mCampusList.length;
     }
 
-    class CampusViewHolder extends RecyclerView.ViewHolder {
+    class CampusViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public final TextView campusItemView;
         final CampusListAdapter mAdapter;
 
@@ -46,6 +48,19 @@ public class CampusListAdapter extends
             super(itemView);
             campusItemView = itemView.findViewById(R.id.campus_list_item_id);
             this.mAdapter = adapter;
+            campusItemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            // Get the position of the item that was clicked.
+            int mPosition = getLayoutPosition();
+            // Use that to access the affected item in mWordList.
+            String campus = mCampusList[mPosition];
+            Snackbar.make(campusItemView,
+                    campus + " clicked!",
+                    Snackbar.LENGTH_SHORT).show();
+
         }
     }
 }
