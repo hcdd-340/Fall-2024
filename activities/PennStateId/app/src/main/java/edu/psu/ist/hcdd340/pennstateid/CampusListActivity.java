@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CampusList extends AppCompatActivity {
+public class CampusListActivity extends AppCompatActivity {
     private final String[] CAMPUS_LIST = {"Abington",
             "Altoona",
             "Beaver",
