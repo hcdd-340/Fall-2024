@@ -1,6 +1,8 @@
 package edu.psu.ist.hcdd340.pennstateid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -28,9 +30,17 @@ public class CampusListActivity extends AppCompatActivity {
             "York"
     };
 
+    private RecyclerView mRecyclerView;
+    private CampusListAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campus_list);
+
+        mRecyclerView = findViewById(R.id.recycler_view_campus);
+        mAdapter = new CampusListAdapter(this, CAMPUS_LIST);
+        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
