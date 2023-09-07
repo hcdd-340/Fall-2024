@@ -41,12 +41,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (presidentId.equals(currentProfileId)) {
             // currently the president's profile is being shown
             // we will replace it with the dean's profile
-            showProfile(R.drawable.ist_dean,
-                    this.getString(R.string.ist_dean_first_name),
-                    this.getString(R.string.ist_dean_last_name),
-                    this.getString(R.string.ist_dean_machine_id),
-                    this.getString(R.string.ist_dean_id_number),
-                    this.getString(R.string.ist_dean_position_description));
+            showProfile(R.drawable.mascot,
+                    this.getString(R.string.mascot_first_name),
+                    this.getString(R.string.mascot_last_name),
+                    this.getString(R.string.mascot_machine_id),
+                    this.getString(R.string.mascot_id_number),
+                    this.getString(R.string.mascot_position_description));
         } else {
             // currently the dean's profile is being shown
             // we will replace it with the president's profile
