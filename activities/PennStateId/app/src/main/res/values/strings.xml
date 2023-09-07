@@ -12,12 +12,12 @@
     <string name="president_id_number">1 2345 6789</string>
     <string name="president_position_description">FACULTY/PRESIDENT</string>
 
-    <!-- IST Dean Profile information -->
-    <string name="ist_dean_last_name">Sears</string>
-    <string name="ist_dean_first_name">Andrew</string>
-    <string name="ist_dean_machine_id">987654 32101098765</string>
-    <string name="ist_dean_id_number">8 8765 4321</string>
-    <string name="ist_dean_position_description">FACULTY/DEAN</string>
+    <!-- Mascot Profile information -->
+    <string name="mascot_last_name">Lion</string>
+    <string name="mascot_first_name">Nittany</string>
+    <string name="mascot_machine_id">987654 32101098765</string>
+    <string name="mascot_id_number">8 8765 4321</string>
+    <string name="mascot_position_description">MASCOT</string>
 
     <string name="email_label">Email: </string>
     <string name="password_label">Password: </string>
