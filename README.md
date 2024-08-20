@@ -1,2 +1,2 @@
-# HCDD 340 (Fall 2023)
-Class repository for Fall 2023 (Canvas: https://psu.instructure.com/courses/2279893)
+# HCDD 340 (Fall 2024)
+Class repository for Fall 2024 (Canvas: https://psu.instructure.com/courses/2348163/)
